@@ -1,6 +1,9 @@
 #!ruby
+# frozen_string_literal: true
 
-  def cesar_chipher(message, num, result = '')
+# Class that repreent de caesar encryption algorith
+class CaesarCipher
+  def translate(message, num, result = '')
     message.each_char do |char|
       # Check if is less than 91 to know if is upcase or downcase
       base = char.ord < 91 ? 65 : 97
@@ -15,6 +18,4 @@
     end
     result
   end
-
-
-puts cesar_chipher("What a string!", 5)
+end
